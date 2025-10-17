@@ -4,7 +4,7 @@ import { SayHello } from "./dlg/Hello";
 
 const api = new TotoAPIController("toto-ms-ex1", new ControllerConfig())
 
-api.path('GET', '/hello', new SayHello());
+api.path('GET', '/ex1/hello', new SayHello());
 
 api.init().then(() => {
     api.listen()
