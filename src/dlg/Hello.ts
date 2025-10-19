@@ -8,7 +8,10 @@ export class SayHello implements TotoDelegate {
 
     async do(req: Request, userContext: UserContext, execContext: ExecutionContext): Promise<any> {
 
-        return { message: "Hello World!" }
+        return { 
+            message: "Hello World!",
+            host: process.env.GCP_PID ? "GCP" : "AWS" 
+        }
 
     }
 
